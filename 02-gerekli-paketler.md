@@ -1,0 +1,16 @@
+## Gerekli Paket Listesi (Kendi İhtiyaçlarım İçin)
+- [x] npm install @react-navigation/native @react-navigation/native-stack
+- [x] npm install @react-navigation/bottom-tabs
+- [x] npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+- [x] npm install react-native-vector-icons
+- [x] npm install --save-dev @types/react-native-vector-icons
+- [x] npm install react-native-mmkv
+- [x] npm install react-native-linear-gradient
+- [x] npm install react-native-fs
+- [x] npm install react-native-markdown-display
+- [x] npm install axios
+- [x] npm install jwt-decode
+- [x] npm install react-native-keyboard-controller --save
+- [x] npm install @react-native-community/netinfo
+- [x] npm install react-native-date-picker
+- [x] npm install @shopify/flash-list
