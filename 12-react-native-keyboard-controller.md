@@ -6,6 +6,48 @@ Bir inputa focus yapıldığında klavye üstünde düzgün gözükecek şekilde
 npm install react-native-keyboard-controller
 ```
 
+## build.gradle Ayarı
+Derlerken hata oluşmaması için bu ayarın yapılması gereklidir
+```gradle
+android/app/build.gradle:
+{
+    // apply plugin: "com.android.application"
+    // apply plugin: "org.jetbrains.kotlin.android"
+    // apply plugin: "com.facebook.react"
+    // import org.apache.tools.ant.taskdefs.condition.Os
+
+    // En başa import et
+    import org.apache.tools.ant.taskdefs.condition.Os
+
+    // Bu bloğun içine 
+    android
+    {
+        defaultConfig {
+            // Ekle
+            externalNativeBuild {
+                cmake {
+                    def cmakeDir = "${android.sdkDirectory}/cmake/3.22.1/bin" // 3.22.1 sürüm numarasını değiştirmeyi unutma
+                    def ninjaExecutable = Os.isFamily(Os.FAMILY_WINDOWS) ? "ninja.exe" : "ninja"
+                    def ninjaPath = "${cmakeDir}/${ninjaExecutable}".replace("\\", "/")
+                    arguments "-DCMAKE_MAKE_PROGRAM=${ninjaPath}",
+                            "-DCMAKE_OBJECT_PATH_MAX=1024"
+                }
+            }
+        }
+    }
+}
+```
+
+## Uzun Yol Özelliğin Aktifleştir
+PowerShell'i yönetici çalıştırarak bu komutu girin.
+```
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+```
+
+
+## Ek Paketler
+[Reanimated](11-react-native-reanimated.md) kütüphanesi gereklidir.
+
 ## Kullanım
 ```tsx
 import { SafeAreaView, StatusBar, TextInput } from 'react-native';
