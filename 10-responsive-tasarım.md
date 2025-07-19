@@ -1,6 +1,33 @@
 ## Responsive Tasarım
 Belirli bir ekran boyutunu referans alıp tüm telefonlar için pixel bazında bu referansı kullanıp tüm telefon ekranlarıyla uyumlu tasarımlar oluşturmaya yarar.
 
+## Yeni
+```tsx
+import { Dimensions, PixelRatio } from 'react-native';
+
+const DESIGN_SHORT = 375; // iPhone X gibi kısa kenar
+
+const getShortDimension = () => {
+    const { width, height } = Dimensions.get('window');
+    return Math.min(width, height);
+};
+
+// Genel bütün tasarımlar için
+export const sp = (size: number) => {
+    const scale = getShortDimension() / DESIGN_SHORT;
+    return Math.round(PixelRatio.roundToNearestPixel(size * scale));
+};
+
+// Fontlar için
+export const fp = (size: number, min = 12, max = 28) =>
+{
+    const scale = getShortDimension() / DESIGN_SHORT;
+    const scaledSize = size * scale;
+    return Math.round(Math.min(Math.max(PixelRatio.roundToNearestPixel(scaledSize), min), max));
+};
+```
+
+## Eski
 ```tsx
 import { Dimensions, PixelRatio } from 'react-native';
 
