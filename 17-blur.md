@@ -5,23 +5,54 @@ npm install @react-native-community/blur
 
 ## Örnek
 ```tsx
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import { BlurView } from '@react-native-community/blur';
+import { Text, View, StyleSheet, StatusBar, ImageBackground } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
+import { BlurView } from "@react-native-community/blur";
 
-export default function App() {
-  return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            <ImageBackground source={{ uri: 'https://avatars.githubusercontent.com/u/39802870?v=4' }} style={{ width: '100%', height: 300, justifyContent: 'center', alignItems: 'center' }} >
-                
-                {/* Bu kısım ve üstü blurlu */}
-                <BlurView enabled={true} style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0 }} blurType="light" blurAmount={20} reducedTransparencyFallbackColor="white"/>
-                
-                {/* Bu kısım ve altı blursuz */}
-                <View style={{ justifyContent: "center", alignItems: "center", alignContent: "center", alignSelf: "center" }}>
-                    <Text style={{ color: 'white', fontSize: 20 }}>Blurlu Görsel Üzerindeki Yazı</Text>
-                </View>
+export default function App()
+{
+    return (
+        <>
+            <StatusBar animated={true} translucent={true} backgroundColor={"transparent"} barStyle={"light-content"} />
+            <ImageBackground style={styles.container} source={{ uri: "https://images.pexels.com/photos/3214944/pexels-photo-3214944.jpeg?_gl=1*14i86kh*_ga*NjMxNDI4MjY2LjE3NDg1MDUyNzA.*_ga_8JE65Q40S6*czE3NTI5MzgzMjgkbzIkZzEkdDE3NTI5MzgzMzckajUxJGwwJGgw" }}>
+            <View style={styles.blurWrapper}>
+                <BlurView style={StyleSheet.absoluteFill} blurType="light" blurAmount={20} reducedTransparencyFallbackColor="white" />
+                <Text style={styles.text}>DIYET ZAMANI</Text>
+            </View>
+
+            <View style={styles.blurWrapper}>
+                <BlurView style={StyleSheet.absoluteFill} blurType="dark" blurAmount={10} reducedTransparencyFallbackColor="white" />
+                <Text style={styles.text}>DIYET ZAMANI</Text>
+            </View>
             </ImageBackground>
-        </View>
-    );
+        </>
+    )
 }
+
+const styles = StyleSheet.create(
+{
+    container: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    blurWrapper: {
+        width: 300,
+        height: 200,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 20,
+        overflow: 'hidden',
+        backgroundColor: 'rgba(255,255,255,0.01)',
+        marginBottom: 20,
+    },
+
+    text: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'yellow',
+        textAlign: 'center',
+    }
+});
 ```
