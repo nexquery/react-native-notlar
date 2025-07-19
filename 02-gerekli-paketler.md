@@ -16,3 +16,4 @@
 - [x] npm install @shopify/flash-list
 - [x] npm install react-native-svg
 - [x] npm install @react-native-community/blur
+- [x] npm install react-native-reanimated-carousel
