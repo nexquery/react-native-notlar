@@ -15,3 +15,4 @@
 - [x] npm install react-native-date-picker
 - [x] npm install @shopify/flash-list
 - [x] npm install react-native-svg
+- [x] npm install @react-native-community/blur
