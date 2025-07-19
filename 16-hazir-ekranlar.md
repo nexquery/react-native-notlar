@@ -94,3 +94,90 @@ export default function App()
     )
 }
 ```
+
+## Yeni Tab Menü
+```tsx
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { RootStackParamList, StackScreenProps, TabParamList, TabScreenProps } from './../constants';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+// Stackleri oluştur
+const RootStack = createNativeStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<TabParamList>();
+
+// Normal Ekranlar
+import { Karsilama_Ekrani } from './normal/karsilama_ekrani/karsilama_ekrani';
+
+// BottomTab Ekranlar
+import { AnaSayfa } from './tab/anasayfa';
+import { Arama } from './tab/arama';
+import { Topluluk } from './tab/topluluk';
+import { Planlar } from './tab/planlar';
+import { Profil } from './tab/profil';
+
+export function Normal_Menu()
+{
+    return (
+        <NavigationContainer>
+            <RootStack.Navigator screenOptions={{ headerShown: false, animation: 'slide_from_right' }}>
+                <RootStack.Screen name="Karsilama_Ekrani" component={Karsilama_Ekrani} />
+                <RootStack.Screen name="TabMenu" component={TabMenu} />
+            </RootStack.Navigator>
+        </NavigationContainer>
+    )
+}
+
+export function TabMenu({ navigation, route }: StackScreenProps<'TabMenu'>)
+{
+    const insets = useSafeAreaInsets();
+    return (
+        <Tab.Navigator screenOptions={{
+                headerShown: false,
+                animation: 'fade',
+                tabBarShowLabel: false,
+                tabBarStyle: {
+                    backgroundColor: '#000000',
+                    height: 50 + insets.bottom,
+                },
+                tabBarIconStyle: {
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: 5,   // ikonları aşağı indirir
+                },
+                tabBarItemStyle: {
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                },
+            }}>
+            <Tab.Screen name="AnaSayfa" component={AnaSayfa} options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Icon name="home" size={size} color={color} />
+                )
+            }} />
+            <Tab.Screen name="Arama" component={Arama} options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Icon name="magnify" size={size} color={color} />
+                )
+            }} />
+            <Tab.Screen name="Topluluk" component={Topluluk} options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Icon name="account-group" size={size} color={color} />
+                )
+            }} />
+            <Tab.Screen name="Planlar" component={Planlar} options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Icon name="calendar-blank-multiple" size={size} color={color} />
+                )
+            }} />
+            <Tab.Screen name="Profil" component={Profil} options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Icon name="account" size={size} color={color} />
+                )
+            }} />
+        </Tab.Navigator>
+    )
+}
+```
