@@ -56,3 +56,26 @@ const styles = StyleSheet.create(
     }
 });
 ```
+
+## Tüm Ekranı Kaplayan Blur
+```tsx
+export default function App()
+{
+    return (
+        <>
+            <StatusBar animated={true} translucent={true} backgroundColor={"transparent"} barStyle={"light-content"} />
+            <ImageBackground style={styles.container} source={{ uri: "https://images.pexels.com/photos/3214944/pexels-photo-3214944.jpeg?_gl=1*14i86kh*_ga*NjMxNDI4MjY2LjE3NDg1MDUyNzA.*_ga_8JE65Q40S6*czE3NTI5MzgzMjgkbzIkZzEkdDE3NTI5MzgzMzckajUxJGwwJGgw" }}>
+
+            // blur: {
+            //     position: "absolute",
+            //     top: 0,
+            //     left: 0,
+            //     right: 0,
+            //     bottom: 0,
+            // }
+            <BlurView style={StyleSheet.absoluteFill} blurType="dark" blurAmount={10} reducedTransparencyFallbackColor="dark" />
+            </ImageBackground>
+        </>
+    )
+}
+```
