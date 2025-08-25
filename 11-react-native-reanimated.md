@@ -1,6 +1,6 @@
 ## Animasyonlu Efektler İçin
 ```
-npm install react-native-gesture-handler react-native-reanimated
+npm install react-native-gesture-handler react-native-worklets react-native-reanimated
 ```
 
 ## babel.config.js
