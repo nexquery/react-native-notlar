@@ -1,7 +1,7 @@
 ## Gerekli Paket Listesi (Kendi İhtiyaçlarım İçin)
 - [x] npm install @react-navigation/native @react-navigation/native-stack
 - [x] npm install @react-navigation/bottom-tabs
-- [x] npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated
+- [x] npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-worklets react-native-reanimated
 - [x] npm install react-native-vector-icons
 - [x] npm install --save-dev @types/react-native-vector-icons
 - [x] npm install react-native-mmkv
