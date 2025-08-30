@@ -17,3 +17,4 @@
 - [x] npm install react-native-svg
 - [x] npm install @react-native-community/blur
 - [x] npm install react-native-reanimated-carousel
+- [x] npm install react-native-flash-message
