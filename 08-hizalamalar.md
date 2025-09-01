@@ -117,4 +117,8 @@
 	- position:
 		- absolute			: konumu istediğin gibi ayarlar (top, left, right, bottom)
 		- static / relative	: konum normal ayarlama şekline döner
+
+	- flexShrink:
+		- Değere 1 verince View içerisindeki text tabanlı taşmaları önlüyor.
+		- Diğer taşmaları denemedim belki onlarda da işe yarıyordur.
 ```
