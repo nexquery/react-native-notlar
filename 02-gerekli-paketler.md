@@ -4,7 +4,11 @@
 - [x] npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-worklets react-native-reanimated
 - [x] npm install react-native-vector-icons
 - [x] npm install --save-dev @types/react-native-vector-icons
-- [x] npm install react-native-mmkv
+- [x] npm install react-native-mmkv react-native-nitro-modules
+  - [x] **reactNativeArchitectures=arm64-v8a,x86_64**
+  - [x] node_modules > react-native-mmkv > android > CMakeLists.txt
+  - [ ] set(CMAKE_CXX_STANDARD 17)
+  - [x] set(CMAKE_CXX_STANDARD 20) 
 - [x] npm install react-native-linear-gradient
 - [x] npm install react-native-fs
 - [x] npm install react-native-markdown-display
