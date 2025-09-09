@@ -1,3 +1,9 @@
+## PS izni verme
+PowerShell yöentici çalıştırıp komutu girin daha sonra Yes All seçeneğini seçin.
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+
 ## Eski CLI Sürümlerini sil
 ```
 npm uninstall -g react-native-cli @react-native-community/cli
