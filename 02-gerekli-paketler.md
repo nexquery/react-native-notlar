@@ -23,3 +23,4 @@
 - [x] npm install react-native-reanimated-carousel
 - [x] npm install react-native-flash-message
 - [x] npm install @reduxjs/toolkit react-redux
+- [x] npm install react-native-unistyles react-native-nitro-modules react-native-edge-to-edge
