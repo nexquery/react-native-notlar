@@ -22,3 +22,4 @@
 - [x] npm install @react-native-community/blur
 - [x] npm install react-native-reanimated-carousel
 - [x] npm install react-native-flash-message
+- [x] npm install @reduxjs/toolkit react-redux
