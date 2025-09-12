@@ -5,6 +5,7 @@ Belirli bir ekran boyutunu referans alıp tüm telefonlar için pixel bazında b
 ```tsx
 import { Dimensions, PixelRatio } from 'react-native';
 
+// 414 kullanılsa daha iyi olur (Iphone 11 referansı)
 const DESIGN_SHORT = 375; // iPhone X gibi kısa kenar
 
 const getShortDimension = () => {
@@ -24,6 +25,13 @@ export const fp = (size: number, min = 12, max = 28) =>
     const scale = getShortDimension() / DESIGN_SHORT;
     const scaledSize = size * scale;
     return Math.round(Math.min(Math.max(PixelRatio.roundToNearestPixel(scaledSize), min), max));
+};
+
+// Iconlar için
+export const scaledIconSize = (size: number) => {
+    const scale = getShortDimension() / DESIGN_SHORT;
+    const fontScale = PixelRatio.getFontScale();
+    return Math.round(size * scale * fontScale);
 };
 ```
 
