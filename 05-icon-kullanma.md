@@ -1,6 +1,10 @@
 ## ⚠️ ÖNEMLİ
-Gerekli paketlerde icon paketini kurunca burdaki işlemere gerek kalmıyor.  
+Gerekli paketlerde icon paketini kurunca burdaki işlemlere gerek kalmıyor.  
 [Icon Paket Listesi](https://oblador.github.io/react-native-vector-icons/)
+```tsx
+import { FontAwesome6 } from "@react-native-vector-icons/fontawesome6";
+<FontAwesome6 name="rocket" size={20} color="green" iconStyle="solid" />
+```
 
 
 ## Gerekli Paketleri Kurun
