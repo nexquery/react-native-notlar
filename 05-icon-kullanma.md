@@ -1,3 +1,8 @@
+## ⚠️ ÖNEMLİ
+Gerekli paketlerde icon paketini kurunca burdaki işlemere gerek kalmıyor.  
+[Icon Paket Listesi](https://oblador.github.io/react-native-vector-icons/)
+
+
 ## Gerekli Paketleri Kurun
 ```
 npm install react-native-vector-icons
