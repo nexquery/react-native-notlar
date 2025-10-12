@@ -1,3 +1,8 @@
+## Efekt olarak en iyisi
+```tsx
+<Stack.Navigator screenOptions={{ headerShown: false, animation: 'fade', presentation: 'transparentModal', contentStyle: { backgroundColor: 'transparent' } }} >
+```
+
 ## constants.tsx
 ```tsx
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
