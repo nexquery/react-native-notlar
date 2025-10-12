@@ -2,7 +2,7 @@
 - [x] npm install @react-navigation/native @react-navigation/native-stack
 - [x] npm install @react-navigation/bottom-tabs
 - [x] npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-worklets react-native-reanimated
-- [x] npm install [@react-native-vector-icons/fontawesome6](https://github.com/oblador/react-native-vector-icons)
+- [x] npm install [@react-native-vector-icons/ant-design @react-native-vector-icons/entypo @react-native-vector-icons/evil-icons @react-native-vector-icons/feather @react-native-vector-icons/fontawesome @react-native-vector-icons/fontawesome5-pro @react-native-vector-icons/fontawesome5 @react-native-vector-icons/fontawesome6-pro @react-native-vector-icons/fontawesome6 @react-native-vector-icons/fontisto @react-native-vector-icons/foundation @react-native-vector-icons/ionicons @react-native-vector-icons/lucide @react-native-vector-icons/material-design-icons @react-native-vector-icons/material-icons @react-native-vector-icons/octicons @react-native-vector-icons/simple-line-icons @react-native-vector-icons/zocial](https://github.com/oblador/react-native-vector-icons)
 - [x] npm install react-native-mmkv react-native-nitro-modules
 - [x] npm install react-native-linear-gradient
 - [x] npm install react-native-fs
