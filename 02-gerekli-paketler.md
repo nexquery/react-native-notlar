@@ -16,7 +16,7 @@
 - [x] npm install react-native-svg
 - [x] npm install @react-native-community/blur
 - [x] npm install react-native-reanimated-carousel
-- [x] npm install react-native-flash-message
 - [x] npm install @reduxjs/toolkit react-redux
 - [x] npm install react-native-unistyles react-native-nitro-modules react-native-edge-to-edge
 - [x] npm install zustand
+- [x] npm install [@backpackapp-io/react-native-toast](https://github.com/backpackapp-io/react-native-toast)
