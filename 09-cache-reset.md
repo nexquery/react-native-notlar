@@ -22,3 +22,8 @@ tasks.whenTaskAdded { task ->
 }
 ```
 kodunu ekle daha sonra manuel olarak **android/app/.cxx** klasörünü sil
+
+## Node Modules Klasörü
+```
+Get-ChildItem node_modules -Recurse -Directory -Filter "build" | Where-Object { $_.FullName -match "\\android\\build$" } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+```
