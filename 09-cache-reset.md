@@ -3,6 +3,7 @@
 cd android
 ./gradlew clean
 cd ..
+watchman watch-del-all
 npx react-native start --reset-cache
 CTRL + C (uygulamayı kapatmak için)
 npx react-native run-android
