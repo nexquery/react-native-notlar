@@ -29,7 +29,7 @@ export default function App()
     return (
         <>
             <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-                <Text>Mocha</Text>
+                <Text>Nano</Text>
                 <Icon name="heart" size={24} />
             </View>
         </>
